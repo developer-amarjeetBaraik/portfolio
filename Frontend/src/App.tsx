@@ -19,9 +19,6 @@ const App = () => (
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/about" element={<Index />} />
-          <Route path="/projects" element={<Index />} />
-          <Route path="/contact" element={<Index />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

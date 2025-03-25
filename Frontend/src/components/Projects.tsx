@@ -9,7 +9,7 @@ interface Project {
   tags: string[];
   imageUrl: string;
   url: string;
-  gitHubUrl:string;
+  gitHubUrl: string;
 }
 
 const Projects = () => {
@@ -23,7 +23,7 @@ const Projects = () => {
       title: "YouBoard – A Visual Planning Tool",
       description: "A powerful tool for visualizing and organizing plans, built using the raw <canvas> API. Offers an intuitive interface for adding, moving, and modifying elements, making idea visualization effortless and efficient.",
       tags: ["React", "Node.js", "MongoDB"],
-      imageUrl: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?q=80&w=1470&auto=format&fit=crop",
+      imageUrl: "yourboard project.png",
       url: "/projects/e-commerce",
       gitHubUrl: "https://github.com/developer-amarjeetBaraik/your-board.io.git",
     },
@@ -32,27 +32,27 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "A sleek and professional portfolio showcasing expertise in web development, UI/UX design, and interactive projects. Designed for seamless navigation and an engaging user experience to highlight standout work.",
       tags: ["React", "Tailwind CSS", "Framer Motion"],
-      imageUrl: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1470&auto=format&fit=crop",
+      imageUrl: "./portfolio project.png",
       url: "/projects/portfolio",
-      gitHubUrl: "/projects/portfolio",
+      gitHubUrl: "https://github.com/developer-amarjeetBaraik/portfolio.git",
     },
     {
       id: 3,
       title: "Clicks Studio – Photo & Videography Brand",
       description: "A creative project for Clicks Studio, a professional photo and videography team based in Ranchi. Specializing in high-quality content, including regional music videos and engaging YouTube Shorts.",
       tags: ["React", "TypeScript", "Firebase"],
-      imageUrl: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1472&auto=format&fit=crop",
-      url: "/projects/task-manager",
-      gitHubUrl: "/projects/task-manager",
+      imageUrl: "./clicks studio project.png",
+      url: "https://clicks-studio.onrender.com/",
+      gitHubUrl: "https://github.com/developer-amarjeetBaraik/clicks-studio-project.git",
     },
     {
       id: 4,
       title: "Independence Day Certification Project",
       description: "An interactive web experience where users complete a set of mandatory actions to receive a ‘The Deshbhakt Certificate.’ A creative way to engage users in a patriotic digital celebration.",
       tags: ["JavaScript", "APIs", "D3.js"],
-      imageUrl: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=1470&auto=format&fit=crop",
+      imageUrl: "./independence day project.png",
       url: "/projects/weather-app",
-      gitHubUrl: "/projects/weather-app",
+      gitHubUrl: "https://github.com/developer-amarjeetBaraik/IndependenceDayProject.git",
     },
   ];
 
@@ -134,9 +134,9 @@ const Projects = () => {
             >
               <div className="project-card h-full flex overflow-hidden relative group">
                 <div
-                  className="absolute inset-0 bg-gradient-to-br from-purple-900/90 to-purple-700/90 rounded-3xl border border-purple-600/30"
+                  className="absolute inset-0 bg-gradient-to-br from-[#24005ce6] to-[#1c1725e6] rounded-3xl border border-[#ffffff4d]"
                   style={{
-                    backgroundImage: 'linear-gradient(to bottom right, rgba(91, 33, 182, 0.9), rgba(124, 58, 237, 0.9))',
+                    backgroundImage: 'linear-gradient(to bottom right, #24005ce6, #1c1725e6)',
                     boxShadow: 'inset 0 0 30px rgba(139, 92, 246, 0.3)'
                   }}
                 />
@@ -152,31 +152,33 @@ const Projects = () => {
                   <div className="absolute right-6 bottom-12 w-1.5 h-1.5 bg-purple-300 rounded-full opacity-60" />
                 </div> */}
 
-                <div className="flex flex-row h-full w-full relative z-10">
-                  <div className="w-1/3 p-6 flex items-center justify-center">
-                    <div className="relative w-36 h-36 flex items-center justify-center">
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-400/40 to-purple-600/40 rounded-full blur-md" />
-                      {/* image */}
-                      <img
-                        src={project.imageUrl}
-                        alt={project.title}
-                        className="w-32 h-32 object-cover object-center rounded-2xl relative z-10 transform group-hover:scale-110 transition-transform duration-300"
-                        style={{
-                          boxShadow: '0 10px 25px -5px rgba(91, 33, 182, 0.5)'
-                        }}
-                      />
-                    </div>
+                <div className="flex flex-col justify-center items-center h-full w-full relative z-10 md:flex-row">
+                  {/* image container */}
+                  <div className="w-auto p-6 flex items-center justify-center">
+                    {/* image */}
+                    <img
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="relative z-10 transform group-hover:scale-110 transition-transform duration-300"
+                      style={{
+                        boxShadow: '0 10px 25px -5px #ffffff4d'
+                      }}
+                    />
                   </div>
 
-                  <div className="w-2/3 p-6 flex flex-col justify-center">
+                  {/* project content */}
+                  <div className="p-4 flex flex-col justify-center w-auto">
+                    {/* project title */}
                     <h3 className="text-2xl font-bold mb-3 text-white tracking-tight">
                       {project.title}
                     </h3>
 
+                    {/* project discription */}
                     <p className="text-gray-200 mb-6 text-sm">
                       {project.description}
                     </p>
 
+                    {/* buttons */}
                     <span className="flex justify-start items-center gap-3">
                       <a
                         href={project.url}
