@@ -82,7 +82,7 @@ const Hero = () => {
                   section.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="px-8 py-4 text-white border border-white/20 rounded-full hover:bg-white/5 transition-all duration-300 active:scale-95"
+              className="glass-button px-8 py-4 text-white font-medium glow"
             >
               Get In Touch
             </button>
