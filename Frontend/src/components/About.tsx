@@ -133,7 +133,7 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="section-heading">About Me</h2>
           <p className="section-subheading">
-            A passionate web developer with expertise in creating beautiful, functional websites
+            A passionate web developer with expertise in creating beautiful, functional websites and web apps
           </p>
         </div>
 

@@ -39,7 +39,7 @@ const Projects = () => {
       imageUrl: "./portfolio project.png",
       isLive: true,
       isCodePrivate: false,
-      url: "/projects/portfolio",
+      url: "https://portfolio-amarjeet.onrender.com",
       gitHubUrl: "https://github.com/developer-amarjeetBaraik/portfolio.git",
     },
     {
