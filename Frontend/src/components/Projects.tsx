@@ -8,6 +8,8 @@ interface Project {
   description: string;
   tags: string[];
   imageUrl: string;
+  isLive: Boolean;
+  isCodePrivate: Boolean;
   url: string;
   gitHubUrl: string;
 }
@@ -24,6 +26,8 @@ const Projects = () => {
       description: "A powerful tool for visualizing and organizing plans, built using the raw <canvas> API. Offers an intuitive interface for adding, moving, and modifying elements, making idea visualization effortless and efficient.",
       tags: ["React", "Node.js", "MongoDB"],
       imageUrl: "yourboard project.png",
+      isLive: false,
+      isCodePrivate: false,
       url: "/projects/e-commerce",
       gitHubUrl: "https://github.com/developer-amarjeetBaraik/your-board.io.git",
     },
@@ -33,6 +37,8 @@ const Projects = () => {
       description: "A sleek and professional portfolio showcasing expertise in web development, UI/UX design, and interactive projects. Designed for seamless navigation and an engaging user experience to highlight standout work.",
       tags: ["React", "Tailwind CSS", "Framer Motion"],
       imageUrl: "./portfolio project.png",
+      isLive: true,
+      isCodePrivate: false,
       url: "/projects/portfolio",
       gitHubUrl: "https://github.com/developer-amarjeetBaraik/portfolio.git",
     },
@@ -42,6 +48,8 @@ const Projects = () => {
       description: "A creative project for Clicks Studio, a professional photo and videography team based in Ranchi. Specializing in high-quality content, including regional music videos and engaging YouTube Shorts.",
       tags: ["React", "TypeScript", "Firebase"],
       imageUrl: "./clicks studio project.png",
+      isLive: true,
+      isCodePrivate: false,
       url: "https://clicks-studio.onrender.com/",
       gitHubUrl: "https://github.com/developer-amarjeetBaraik/clicks-studio-project.git",
     },
@@ -51,6 +59,8 @@ const Projects = () => {
       description: "An interactive web experience where users complete a set of mandatory actions to receive a ‘The Deshbhakt Certificate.’ A creative way to engage users in a patriotic digital celebration.",
       tags: ["JavaScript", "APIs", "D3.js"],
       imageUrl: "./independence day project.png",
+      isLive: false,
+      isCodePrivate: false,
       url: "/projects/weather-app",
       gitHubUrl: "https://github.com/developer-amarjeetBaraik/IndependenceDayProject.git",
     },
@@ -180,23 +190,40 @@ const Projects = () => {
 
                     {/* buttons */}
                     <span className="flex justify-start items-center gap-3">
-                      <a
-                        href={project.url}
-                        target='_blank'
-                        className={`learn-more-btn px-6 py-2 w-max rounded-full text-white text-sm font-medium transition-all duration-300 border border-purple-500/50
-                        ${hovered === project.id ? 'bg-purple-500/40' : 'bg-purple-500/20'}`}
-                      >
-                        View Live
-                      </a>
 
-                      <a
-                        href={project.gitHubUrl}
-                        target='_blank'
-                        className={`learn-more-btn px-6 py-2 w-max rounded-full text-white text-sm font-medium transition-all duration-300 border border-purple-500/50
+                      {/* project live link */}
+                      {
+                        project.isLive ? <a
+                          href={project.url}
+                          target='_blank'
+                          className={`learn-more-btn px-6 py-2 w-max rounded-full text-white text-sm font-medium transition-all duration-300 border border-purple-500/50
                         ${hovered === project.id ? 'bg-purple-500/40' : 'bg-purple-500/20'}`}
-                      >
-                        View Code
-                      </a>
+                        >
+                          View Live
+                        </a> : <p
+                          className={`learn-more-btn px-6 py-2 w-max rounded-full text-white text-sm font-medium transition-all duration-300 border border-purple-500/50
+                        ${hovered === project.id ? 'bg-purple-500/40' : 'bg-purple-500/20'}`}
+                        >
+                          Coming Soon
+                        </p>
+                      }
+
+                      {/* porject code link */}
+                      {
+                        project.isCodePrivate ? <p
+                          className={`learn-more-btn px-6 py-2 w-max rounded-full text-white text-sm font-medium transition-all duration-300 border border-purple-500/50
+                        ${hovered === project.id ? 'bg-purple-500/40' : 'bg-purple-500/20'}`}
+                        >
+                          Private Code
+                        </p> : <a
+                          href={project.url}
+                          target='_blank'
+                          className={`learn-more-btn px-6 py-2 w-max rounded-full text-white text-sm font-medium transition-all duration-300 border border-purple-500/50
+                        ${hovered === project.id ? 'bg-purple-500/40' : 'bg-purple-500/20'}`}
+                        >
+                          View Code
+                        </a>
+                      }
                     </span>
                   </div>
                 </div>
