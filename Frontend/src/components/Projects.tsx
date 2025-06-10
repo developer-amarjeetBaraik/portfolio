@@ -22,10 +22,10 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "YouBoard – A Visual Planning Tool",
+      title: "Drawwify – A Visual Planning Tool",
       description: "A powerful tool for visualizing and organizing plans, built using the raw <canvas> API. Offers an intuitive interface for adding, moving, and modifying elements, making idea visualization effortless and efficient.",
       tags: ["React", "Node.js", "MongoDB"],
-      imageUrl: "yourboard project.png",
+      imageUrl: "drawwify.png",
       isLive: false,
       isCodePrivate: false,
       url: "/projects/e-commerce",
@@ -144,11 +144,11 @@ const Projects = () => {
             >
               <div className="project-card h-full flex overflow-hidden relative group">
                 <div
-                  className="absolute inset-0 bg-gradient-to-br from-[#24005ce6] to-[#1c1725e6] rounded-3xl border border-[#ffffff4d]"
-                  style={{
-                    backgroundImage: 'linear-gradient(to bottom right, #24005ce6, #1c1725e6)',
-                    boxShadow: 'inset 0 0 30px rgba(139, 92, 246, 0.3)'
-                  }}
+                  className="absolute inset-0 bg-gradient-to-br from-[#161020e6] to-[#05010de6] rounded-3xl border border-[#ffffff4d]"
+                  // style={{
+                  //   backgroundImage: 'linear-gradient(to bottom right, #24005ce6, #1c1725e6)',
+                  //   boxShadow: 'inset 0 0 30px rgba(139, 92, 246, 0.3)'
+                  // }}
                 />
 
                 {/* Glow effect */}
