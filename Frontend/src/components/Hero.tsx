@@ -63,8 +63,8 @@ const Hero = () => {
             </button>
 
             <a
-              href="./Amarjeet_Chik_Baraik_Resume.pdf"
-              download="Amarjeet_Chik_Baraik_Resume.pdf"
+              href="./Amarjeet_Chik_Baraik_Resume_Updated_23-06-2025.pdf"
+              download="Amarjeet_Chik_Baraik_Resume_Updated_23-06-2025.pdf"
               className="glass-button px-8 py-4 text-white font-medium glow flex items-center gap-2"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

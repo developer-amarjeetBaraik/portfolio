@@ -26,10 +26,10 @@ const Projects = () => {
       description: "A powerful tool for visualizing and organizing plans, built using the raw <canvas> API. Offers an intuitive interface for adding, moving, and modifying elements, making idea visualization effortless and efficient.",
       tags: ["React", "Node.js", "MongoDB"],
       imageUrl: "drawwify.png",
-      isLive: false,
+      isLive: true,
       isCodePrivate: false,
-      url: "/projects/e-commerce",
-      gitHubUrl: "https://github.com/developer-amarjeetBaraik/your-board.io.git",
+      url: "https://drawwify.in",
+      gitHubUrl: "https://github.com/developer-amarjeetBaraik/drawwify.in",
     },
     {
       id: 2,
